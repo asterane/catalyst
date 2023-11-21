@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2023 Matthew Rothlisberger
+# SPDX-License-Identifier: Apache-2.0
+
+[package]
+name = "catalyst"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+# print some debug info
+dbg = []
+
+[dependencies]

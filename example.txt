@@ -1,0 +1,7 @@
+-- SPDX-FileCopyrightText: 2023 Matthew Rothlisberger
+-- SPDX-License-Identifier: CC0-1.0
+
+Item A 0.4
+Item B 0.25
+Item C 0.25
+Item D 0.1

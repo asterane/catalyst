@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2023 Matthew Rothlisberger
+# SPDX-License-Identifier: FSFAP
+
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved. This file is offered as-is,
+# without any warranty.
+
+* Catalyst
+Catalyst is a small program meant to help one choose between multiple
+weighted options. On each run, it randomly selects one item from a
+list, with each item's selection probability determined by a provided
+weight.
+
+It's meant to be run with the same set of options and weights
+repeatedly, on different occasions. Run it often enough, and the
+distribution of options selected will match the provided
+weights. Under these conditions, each choice made using Catalyst might
+be regarded as a superposition of all options, in proportion according
+to their weights.
+
+Run with:
+=$ <Catalyst command> <path to weights file>=
+
+For example:
+=$ target/release/catalyst example.txt=
+
+** File Format
+Catalyst must be provided with a valid file containing options and
+their weights. See =example.txt= for the format. Each line contains an
+option title followed by a weight. Weights must be decimal values
+between 0 and 1; the sum of all weights must be 1. Any line beginning
+with "--" is a comment.
+
+** Note
+This program uses Linux's =getrandom= system call directly and won't
+work on operating systems with a different set of syscalls.
